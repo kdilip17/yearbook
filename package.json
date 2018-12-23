@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/kdilip17/yearbook/issues"
   },
-  "homepage": "https://github.com/kdilip17/yearbook#readme"
+  "homepage": "https://github.com/kdilip17/yearbook#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0"
+  }
 }
