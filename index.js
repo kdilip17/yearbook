@@ -3,8 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 // initialize our express app
 const app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
 //
 
 // Set up mongoose connection
@@ -19,8 +21,10 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 //
 
 const category = require('./lib/routes/category.route') // Imports routes for the category
+const budgets = require('./lib/routes/budgets.route') // Imports routes for the budget
 
 app.use('/category',category);
+app.use('/budget',budgets);
 
 let port = 7788;
 
