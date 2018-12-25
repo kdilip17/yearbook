@@ -1,11 +1,24 @@
 // app.js
 const express = require('express');
 const bodyParser = require('body-parser');
+const utils = require("./lib/utils/util");
 // initialize our express app
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+/* var myLogger = function (req, res, next) {
+     req = utils.seperatePayloadRequest(req)
+     next()
+}
+
+app.use(myLogger)
+
+app.get('/', function (req, res) {
+     console.log(req)
+     res.send('Hello World!')
+}) */
 
 //
 
