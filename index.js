@@ -37,6 +37,10 @@ const category = require('./lib/routes/category.route') // Imports routes for th
 const budgets = require('./lib/routes/budget.route') // Imports routes for the budget
 const budgetItems = require('./lib/routes/budgetitems.route') // Imports routes for the budget items
 
+app.use("/health",function(req, res, next){
+     res.send("Welcome to yearbook")
+})
+
 app.use('/category',category);
 app.use('/budget',budgets);
 app.use('/items',budgetItems);
